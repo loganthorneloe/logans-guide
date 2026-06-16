@@ -6,7 +6,7 @@ This is not a complete curriculum. It is a short map of unusually good resources
 
 Use it like this:
 
-1. Read `ML Quick Start` if you cannot explain features, labels, loss, gradients, overfitting, tokens, attention, and evals.
+1. Read `Machine Learning Quick Start` if you cannot explain features, labels, loss, gradients, overfitting, tokens, attention, and evals.
 2. Read `Understanding Research vs Engineering` so you can tell when a resource is explaining a scientific result versus a production practice.
 3. Scan the problem spaces below and pick the one that feels most interesting or useful.
 4. Read the resources in that section in order.
@@ -16,59 +16,131 @@ This is an **[AI for Software Engineers](https://aiforswes.com)** resource. **[S
 
 ## Table of Contents
 
-1. [**ML Quick Start**](#ml-quick-start)
+1. [**Machine Learning Quick Start**](#machine-learning-quick-start)
 
-   Get the minimum ML vocabulary and training-loop intuition before specializing.
+   Get the minimum machine learning vocabulary and training-loop intuition before specializing.
+
+   - [The Hundred-Page Machine Learning Book](#the-hundred-page-machine-learning-book-by-andriy-burkov)
+   - [Intro to Machine Learning](#intro-to-machine-learning-by-kaggle)
+   - [Neural Networks](#neural-networks-by-3blue1brown)
+   - [Practical Deep Learning for Coders](#practical-deep-learning-for-coders-by-fastai)
+   - [Learn the Basics](#learn-the-basics-by-pytorch)
 
 2. [**Understanding Research vs Engineering**](#understanding-research-vs-engineering)
 
-   Learn how to separate research claims, ML engineering lessons, and agentic engineering patterns.
+   Learn how to separate research claims, machine learning engineering lessons, and agentic engineering patterns.
 
-3. [**Core ML Principles**](#core-ml-principles)
+   - [How to Read a Paper](#how-to-read-a-paper-by-s-keshav)
+   - [Semantic Scholar](#semantic-scholar)
+   - [Hugging Face Papers and Papers With Code](#hugging-face-papers-and-papers-with-code)
+   - [AI Index 2025](#ai-index-2025-by-stanford-hai)
+
+3. [**Core Machine Learning Principles**](#core-machine-learning-principles)
 
    Build durable intuition for generalization, leakage, baselines, metrics, and debugging.
+
+   - [A Few Useful Things to Know About Machine Learning](#a-few-useful-things-to-know-about-machine-learning-by-pedro-domingos)
+   - [Machine Learning Yearning](#machine-learning-yearning-by-andrew-ng)
+   - [Rules of Machine Learning](#rules-of-machine-learning-by-martin-zinkevich)
+   - [Machine Learning Explainability](#machine-learning-explainability-by-kaggle)
 
 4. [**Data, Training Signals, and Synthetic Data**](#data-training-signals-and-synthetic-data)
 
    Understand how data quality, labels, curation, feedback, and synthetic data shape behavior.
 
+   - [Datasheets for Datasets](#datasheets-for-datasets-by-gebru-et-al)
+   - [Data Cascades in High-Stakes AI](#data-cascades-in-high-stakes-ai-by-sambasivan-et-al)
+   - [DataComp](#datacomp-by-gadre-et-al)
+   - [Self-Instruct](#self-instruct-by-wang-et-al)
+
 5. [**Evaluation, Benchmarks, and Reliability**](#evaluation-benchmarks-and-reliability)
 
    Learn how to tell whether a model or AI product actually got better.
+
+   - [Your AI Product Needs Evals](#your-ai-product-needs-evals-by-hamel-husain)
+   - [HELM](#helm-by-liang-et-al)
+   - [Benchmark Data Contamination in LLMs: A Survey](#benchmark-data-contamination-in-llms-a-survey-by-li-and-flanigan)
+   - [Using the Evaluation Tool](#using-the-evaluation-tool-by-anthropic)
 
 6. [**MLOps and AI Operations**](#mlops-and-ai-operations)
 
    See what it takes to deploy, monitor, own, and improve learned systems in production.
 
+   - [Designing Machine Learning Systems](#designing-machine-learning-systems-by-chip-huyen)
+   - [Hidden Technical Debt in Machine Learning Systems](#hidden-technical-debt-in-machine-learning-systems-by-sculley-et-al)
+   - [Full Stack Deep Learning](#full-stack-deep-learning)
+   - [Made With ML](#made-with-ml-by-goku-mohandas)
+
 7. [**Model Architectures and Reasoning**](#model-architectures-and-reasoning)
 
    Study how architecture, scale, attention, sequence models, and test-time compute affect capability.
+
+   - [Intro to Large Language Models](#intro-to-large-language-models-by-andrej-karpathy)
+   - [The Illustrated Transformer](#the-illustrated-transformer-by-jay-alammar)
+   - [Attention Is All You Need](#attention-is-all-you-need-by-vaswani-et-al)
+   - [Mamba](#mamba-by-gu-and-dao)
+   - [Learning to Reason with LLMs](#learning-to-reason-with-llms-by-openai)
 
 8. [**Retrieval and Context**](#retrieval-and-context)
 
    Learn how embeddings, grounding, RAG, long context, and provenance connect models to evidence.
 
+   - [The Illustrated Word2vec](#the-illustrated-word2vec-by-jay-alammar)
+   - [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](#retrieval-augmented-generation-for-knowledge-intensive-nlp-tasks-by-lewis-et-al)
+   - [Lost in the Middle](#lost-in-the-middle-by-liu-et-al)
+   - [Building Agentic RAG with LlamaIndex](#building-agentic-rag-with-llamaindex-by-deeplearningai)
+
 9. [**Agents, Memory, and Tool Use**](#agents-memory-and-tool-use)
 
    Understand agent harnesses, tool calls, memory, state, handoffs, and action reliability.
+
+   - [Building Effective Agents](#building-effective-agents-by-anthropic)
+   - [ReAct](#react-by-yao-et-al)
+   - [Toolformer](#toolformer-by-schick-et-al)
+   - [12-Factor Agents](#12-factor-agents-by-humanlayer)
+   - [MemGPT](#memgpt-by-packer-et-al)
+   - [Continual Lifelong Learning with Neural Networks](#continual-lifelong-learning-with-neural-networks-by-parisi-et-al)
 
 10. [**Post-Training and Alignment**](#post-training-and-alignment)
 
     Learn how base models become useful assistants through feedback, preference data, adapters, and distillation.
 
+    - [Training Language Models to Follow Instructions with Human Feedback](#training-language-models-to-follow-instructions-with-human-feedback-by-ouyang-et-al)
+    - [RLHF Book](#rlhf-book-by-nathan-lambert)
+    - [Direct Preference Optimization](#direct-preference-optimization-by-rafailov-et-al)
+    - [PEFT](#peft-by-hugging-face)
+    - [Distilling the Knowledge in a Neural Network](#distilling-the-knowledge-in-a-neural-network-by-hinton-vinyals-and-dean)
+
 11. [**Training and Inference Infrastructure**](#training-and-inference-infrastructure)
 
     Understand the GPU, distributed training, memory, serving, latency, and cost constraints behind capability.
+
+    - [Machine Learning Systems](#machine-learning-systems)
+    - [The Ultra-Scale Playbook](#the-ultra-scale-playbook-by-hugging-facenanotron)
+    - [Training Compute-Optimal Large Language Models](#training-compute-optimal-large-language-models-by-hoffmann-et-al)
+    - [FlashAttention](#flashattention-by-dao-et-al)
+    - [PagedAttention](#pagedattention-by-kwon-et-al)
 
 12. [**Local and Open Models**](#local-and-open-models)
 
     Learn the tradeoffs around open weights, local inference, quantization, privacy, and model selection.
 
+    - [LLM Course](#llm-course-by-hugging-face)
+    - [llama.cpp](#llamacpp-by-ggml-org)
+    - [Open LLM Leaderboard](#open-llm-leaderboard-by-hugging-face)
+    - [Model Cards](#model-cards-by-hugging-face)
+
 13. [**Interpretability, Safety, and Security**](#interpretability-safety-and-security)
 
     Learn how people inspect, constrain, secure, and govern learned systems.
 
-## ML Quick Start
+    - [The Building Blocks of Interpretability](#the-building-blocks-of-interpretability-by-olah-et-al)
+    - [A Mathematical Framework for Transformer Circuits](#a-mathematical-framework-for-transformer-circuits-by-elhage-et-al)
+    - [Concrete Problems in AI Safety](#concrete-problems-in-ai-safety-by-amodei-et-al)
+    - [OWASP Top 10 for LLM Applications](#owasp-top-10-for-llm-applications-by-owasp)
+    - [AI Risk Management Framework](#ai-risk-management-framework-by-nist)
+
+## Machine Learning Quick Start
 
 TODO: Write a quick blurb explaining why this section matters.
 
@@ -126,7 +198,7 @@ Why use them: They are useful for discovery, code, datasets, and benchmark conte
 
 Why read it: It gives a broad annual map of progress, investment, adoption, and benchmark movement so individual papers have context.
 
-## Core ML Principles
+## Core Machine Learning Principles
 
 TODO: Write a quick blurb explaining why this section matters.
 
