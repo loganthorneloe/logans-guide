@@ -21,8 +21,12 @@ This is an **[AI for Software Engineers](https://aiforswes.com)** resource. **[S
    Get the minimum machine learning vocabulary and training-loop intuition before specializing.
 
    - [The Hundred-Page Machine Learning Book](#the-hundred-page-machine-learning-book-by-andriy-burkov)
+   - [The Deep Learning Math Workbook](#the-deep-learning-math-workbook-by-professor-tom-yeh)
+   - [Mathematics of Machine Learning](#mathematics-of-machine-learning-by-tivadar-danka)
    - [Intro to Machine Learning](#intro-to-machine-learning-by-kaggle)
    - [Neural Networks](#neural-networks-by-3blue1brown)
+   - [Deep Learning with Python, Third Edition](#deep-learning-with-python-third-edition-by-francois-chollet-and-matthew-watson)
+   - [Elements of Programming Interviews in Python](#elements-of-programming-interviews-in-python-by-adnan-aziz-tsung-hsien-lee-and-amit-prakash)
    - [Practical Deep Learning for Coders](#practical-deep-learning-for-coders-by-fastai)
    - [Learn the Basics](#learn-the-basics-by-pytorch)
 
@@ -31,6 +35,7 @@ This is an **[AI for Software Engineers](https://aiforswes.com)** resource. **[S
    Learn how to separate research claims, machine learning engineering lessons, and agentic engineering patterns.
 
    - [How to Read a Paper](#how-to-read-a-paper-by-s-keshav)
+   - [The Art of Doing Science and Engineering](#the-art-of-doing-science-and-engineering-by-richard-hamming)
    - [Semantic Scholar](#semantic-scholar)
    - [Hugging Face Papers and Papers With Code](#hugging-face-papers-and-papers-with-code)
    - [AI Index 2025](#ai-index-2025-by-stanford-hai)
@@ -62,11 +67,12 @@ This is an **[AI for Software Engineers](https://aiforswes.com)** resource. **[S
    - [Benchmark Data Contamination in LLMs: A Survey](#benchmark-data-contamination-in-llms-a-survey-by-li-and-flanigan)
    - [Using the Evaluation Tool](#using-the-evaluation-tool-by-anthropic)
 
-6. [**MLOps and AI Operations**](#mlops-and-ai-operations)
+6. [**Machine Learning Systems Engineering**](#machine-learning-systems-engineering)
 
    See what it takes to deploy, monitor, own, and improve learned systems in production.
 
    - [Designing Machine Learning Systems](#designing-machine-learning-systems-by-chip-huyen)
+   - [Designing Data-Intensive Applications](#designing-data-intensive-applications-by-martin-kleppmann)
    - [Hidden Technical Debt in Machine Learning Systems](#hidden-technical-debt-in-machine-learning-systems-by-sculley-et-al)
    - [Full Stack Deep Learning](#full-stack-deep-learning)
    - [Made With ML](#made-with-ml-by-goku-mohandas)
@@ -76,6 +82,8 @@ This is an **[AI for Software Engineers](https://aiforswes.com)** resource. **[S
    Study how architecture, scale, attention, sequence models, and test-time compute affect capability.
 
    - [Intro to Large Language Models](#intro-to-large-language-models-by-andrej-karpathy)
+   - [Build a Large Language Model From Scratch](#build-a-large-language-model-from-scratch-by-sebastian-raschka)
+   - [Build a Reasoning Model From Scratch](#build-a-reasoning-model-from-scratch-by-sebastian-raschka)
    - [The Illustrated Transformer](#the-illustrated-transformer-by-jay-alammar)
    - [Attention Is All You Need](#attention-is-all-you-need-by-vaswani-et-al)
    - [Mamba](#mamba-by-gu-and-dao)
@@ -116,6 +124,7 @@ This is an **[AI for Software Engineers](https://aiforswes.com)** resource. **[S
     Understand the GPU, distributed training, memory, serving, latency, and cost constraints behind capability.
 
     - [Machine Learning Systems](#machine-learning-systems)
+    - [Elements of Programming Interviews in C++](#elements-of-programming-interviews-in-c-by-adnan-aziz-tsung-hsien-lee-and-amit-prakash)
     - [The Ultra-Scale Playbook](#the-ultra-scale-playbook-by-hugging-facenanotron)
     - [Training Compute-Optimal Large Language Models](#training-compute-optimal-large-language-models-by-hoffmann-et-al)
     - [FlashAttention](#flashattention-by-dao-et-al)
@@ -150,6 +159,18 @@ Why read it: This is the shortest serious pass through classical ML, loss, optim
 
 
 
+### The Deep Learning Math Workbook by Professor Tom Yeh
+
+Why read it: It belongs here if the goal is to make neural networks, gradients, tensors, and training math feel concrete instead of mysterious.
+
+
+
+### [Mathematics of Machine Learning](https://www.packtpub.com/en-us/product/mathematics-of-machine-learning-9781837027873) by Tivadar Danka
+
+Why read it: It gives a deeper structured path through linear algebra, calculus, and probability for machine learning.
+
+
+
 ### [Intro to Machine Learning](https://www.kaggle.com/learn/intro-to-machine-learning) by Kaggle
 
 Why read it: It gets you training, validating, and debugging a small model in code instead of only reading definitions.
@@ -159,6 +180,18 @@ Why read it: It gets you training, validating, and debugging a small model in co
 ### [Neural Networks](https://www.3blue1brown.com/topics/neural-networks) by 3Blue1Brown
 
 Why read it: It gives visual intuition for gradients, backpropagation, and representation learning before the math gets dense.
+
+
+
+### [Deep Learning with Python, Third Edition](https://www.manning.com/books/deep-learning-with-python-third-edition) by Francois Chollet and Matthew Watson
+
+Why read it: It is the practical deep learning book for understanding Keras-style model building, training, and modern neural network workflows.
+
+
+
+### [Elements of Programming Interviews in Python](https://www.amazon.com/Elements-Programming-Interviews-Python-Insiders/dp/1537713949) by Adnan Aziz, Tsung-Hsien Lee, and Amit Prakash
+
+Why read it: It belongs here if Python fluency is blocking you from implementing small models, data pipelines, or learning exercises.
 
 
 
@@ -179,6 +212,12 @@ TODO: Write a quick blurb explaining why this section matters.
 ### [How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf) by S. Keshav
 
 Why read it: It gives a practical three-pass method for reading technical papers without getting stuck in every detail.
+
+
+
+### [The Art of Doing Science and Engineering](https://www.stripe.press/art-of-doing-science-and-engineering) by Richard Hamming
+
+Why read it: It is the best mindset book here for choosing important problems, learning how to learn, and thinking clearly about technical work.
 
 
 
@@ -276,13 +315,19 @@ Why read it: It explains why benchmark results can be misleading when training d
 
 Why read it: It turns evals into concrete mechanics for comparing prompts, models, and task behavior.
 
-## MLOps and AI Operations
+## Machine Learning Systems Engineering
 
 TODO: Write a quick blurb explaining why this section matters.
 
 ### [Designing Machine Learning Systems](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) by Chip Huyen
 
 Why read it: It is the best durable reference for production ML system design, from data loops to monitoring and deployment.
+
+
+
+### [Designing Data-Intensive Applications](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/) by Martin Kleppmann
+
+Why read it: It explains the distributed data systems ideas that machine learning systems inherit: storage, streams, replication, consistency, and reliability.
 
 
 
@@ -309,6 +354,18 @@ TODO: Write a quick blurb explaining why this section matters.
 ### [Intro to Large Language Models](https://www.youtube.com/watch?v=zjkBMFhNj_g) by Andrej Karpathy
 
 Why watch it: It is the clearest high-level explanation of what LLMs are, how they are trained, and why they behave the way they do.
+
+
+
+### [Build a Large Language Model From Scratch](https://www.manning.com/books/build-a-large-language-model-from-scratch) by Sebastian Raschka
+
+Why read it: It gives the code-level path from tokenizer and transformer blocks through pretraining and fine-tuning.
+
+
+
+### [Build a Reasoning Model From Scratch](https://www.manning.com/books/build-a-reasoning-model-from-scratch) by Sebastian Raschka
+
+Why read it: It is the hands-on bridge from general LLM mechanics into reasoning datasets, reinforcement learning, and verifiable rewards.
 
 
 
@@ -437,6 +494,12 @@ TODO: Write a quick blurb explaining why this section matters.
 ### [Machine Learning Systems](https://mlsysbook.ai/)
 
 Why read it: It explains the hardware and software stack behind ML systems without assuming you already live in infrastructure.
+
+
+
+### [Elements of Programming Interviews in C++](https://www.amazon.com/Elements-Programming-Interviews-Adnan-Aziz/dp/1479274836) by Adnan Aziz, Tsung-Hsien Lee, and Amit Prakash
+
+Why read it: It belongs here because C++ fluency matters when reading performance-sensitive inference, kernels, runtimes, and systems code.
 
 
 
