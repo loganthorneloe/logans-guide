@@ -34,6 +34,12 @@ Why read it: A practical deep learning book for model building, training, and mo
 
 
 
+### [Neural Networks: Zero to Hero](https://github.com/karpathy/nn-zero-to-hero) by Andrej Karpathy
+
+Why read it: A from-scratch path through backprop, language modeling, tensors, training loops, GPT, and tokenization.
+
+
+
 ### [Elements of Programming Interviews in Python](https://www.amazon.com/Elements-Programming-Interviews-Python-Insiders/dp/1537713949) by Adnan Aziz, Tsung-Hsien Lee, and Amit Prakash
 
 Why read it: Useful if Python fluency blocks you from implementing small models, data pipelines, or learning exercises.
@@ -73,6 +79,24 @@ Why read it: A practical MLOps path from product framing through deployment and 
 ### [How to Scale Your Model](https://jax-ml.github.io/scaling-book/) by Jacob Austin et al.
 
 Why read it: A systems view of scaling LLM training and inference across TPUs and GPUs, with practical intuition for rooflines, parallelism, memory, profiling, and serving.
+
+
+
+### [Inference Engineering](https://www.baseten.co/inference-engineering/) by Philip Kiely
+
+Why read it: Useful for understanding the engineering layer between a trained model and a fast, reliable, cost-aware product experience.
+
+
+
+### [Intro to Large Language Models](https://www.youtube.com/watch?v=zjkBMFhNj_g) by Andrej Karpathy
+
+Why read it: A high-level map of what LLMs are, how they are trained, and why they behave the way they do.
+
+
+
+### [nanoGPT](https://github.com/karpathy/nanoGPT) by Andrej Karpathy
+
+Why read it: A compact reference implementation for training and fine-tuning GPT-style models without a giant framework.
 
 
 
