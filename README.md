@@ -1,178 +1,179 @@
-![ml road map](assets/road_map.png)
+# AI Problems Guide
 
-<p align="center">
-  <a href="https://github.com/loganthorneloe/ml-road-map">
-    <img src="https://img.shields.io/github/stars/loganthorneloe/ml-road-map?style=social" alt="Star on GitHub">
-  </a>
-  <a href="https://aiforswes.com">
-    <img src="https://img.shields.io/badge/Subscribe-More%20learning%20resources-orange?style=social&logo=substack" alt="Get all resources from AI for Software Engineers">
-  </a>
-  <a href="https://twitter.com/loganthorneloe">
-    <img src="https://img.shields.io/twitter/follow/loganthorneloe?style=social" alt="Follow on X">
-  </a>
-  <a href="https://youtube.com/@loganthorneloe">
-    <img src="https://img.shields.io/youtube/channel/subscribers/UC3H55I0SqNKQgJU77LsFiBw?style=social&logo=youtube" alt="Subscribe on YouTube">
-  </a>
-</p>
+An opinionated guide to understanding the biggest problem spaces in modern AI.
 
-# Machine Learning Road Map
+This is not a complete curriculum. It is a short map of unusually good resources that build intuition quickly. The bias is toward fewer, higher-quality resources over long lists.
 
-This is your streamlined roadmap to learning AI and machine learning from scratch, for free. It starts with prerequisites, moves into machine learning fundamentals, and then engineering topics. This repo will be continually updated as I find great resources and create more guides.
+Use it like this:
 
-> [!TIP]
-> While the whole learning path is free, some paid resources are included and marked with 💰. These paid resources further streamline your learning. I *highly* recommend them as they're from the best AI educators in the world.
+1. Read [ML Quick Start](#ml-quick-start) if you cannot explain features, labels, loss, gradients, overfitting, tokens, attention, and evals.
+2. Read [Understanding Research vs Engineering](#understanding-research-vs-engineering) so you can tell when a resource is explaining a scientific result versus a production practice.
+3. Scan the problem spaces below and pick the one that feels most interesting or useful.
+4. Read the resources in that section in order.
+5. Build or reproduce something small before collecting more links.
 
-This is an **[AI for Software Engineers](https://aiforswes.com)** resource. **[Subscribe](https://aiforswes.com/subscribe)** to the newsletter to get more fundamental resources and technical deep dives in your inbox. If you'd like to support my work, you can subscribe there (paid or free—both help) and star this repository. Have a resource to add? See [how to contribute](./CONTRIBUTING.md).
+Paid resources are marked as optional.
 
-**Contents**
-- [Prerequisites](#prerequisites)
-- [Machine Learning](#machine-learning)
-- [AI Engineering](#ai-engineering)
-- [ML Engineering](#ml-engineering)
-- [Interview Prep](#interview-prep)
-- [Free Compute](#free-compute)
+This is an **[AI for Software Engineers](https://aiforswes.com)** resource. **[Subscribe](https://aiforswes.com/subscribe)** for more fundamentals and technical deep dives.
 
-### How to use this guide
+## Contents
 
-Follow the resources in order down the page. Skip the topics you already understand well. You *can* skip to AI engineering section and come back to ML fundamentals later if AI engineering is your focus. I *highly* recommend going through the ML fundamentals section even if this is the case as it will give you a much deeper understanding of the topics in AI engineering.
+- [ML Quick Start](#ml-quick-start)
+- [Understanding Research vs Engineering](#understanding-research-vs-engineering)
+- [Core ML Principles](#core-ml-principles)
+- [Data, Training Signals, and Synthetic Data](#data-training-signals-and-synthetic-data)
+- [Evaluation, Benchmarks, and Reliability](#evaluation-benchmarks-and-reliability)
+- [MLOps and AI Operations](#mlops-and-ai-operations)
+- [Model Architectures and Reasoning](#model-architectures-and-reasoning)
+- [Memory and Continual Learning](#memory-and-continual-learning)
+- [Retrieval and Context](#retrieval-and-context)
+- [Agents and Tool Use](#agents-and-tool-use)
+- [Post-Training and Alignment](#post-training-and-alignment)
+- [Training and Inference Infrastructure](#training-and-inference-infrastructure)
+- [Local and Open Models](#local-and-open-models)
+- [Interpretability, Safety, and Security](#interpretability-safety-and-security)
 
-> [!NOTE]
-> **AI-assisted learning (experimental):** You can load this repo in your favorite AI coding agent (Claude Code, Gemini CLI, Cursor, etc.) and have it walk you through the roadmap, find resources, and create exercises for you. This functionality is in beta and will be improved over time.
+## ML Quick Start
 
-🚀 Enjoy the resources!
+The core loop is still the center of AI: data -> model -> prediction -> loss -> update -> evaluation. Learn just enough ML to reason about that loop before specializing.
 
----
+1. [The Hundred-Page Machine Learning Book](https://themlbook.com/) by Andriy Burkov - optional paid book; the shortest serious pass through classical ML, loss, optimization, and model selection.
+2. [Intro to Machine Learning](https://www.kaggle.com/learn/intro-to-machine-learning) by Kaggle - train, validate, and debug a small model in code.
+3. [Neural Networks](https://www.3blue1brown.com/topics/neural-networks) by 3Blue1Brown - visual intuition for gradients, backprop, and representation learning.
+4. [Practical Deep Learning for Coders](https://course.fast.ai/) by fast.ai - hands-on deep learning for programmers; use this when you want intuition from working models.
+5. [Learn the Basics](https://docs.pytorch.org/tutorials/beginner/basics/intro.html) by PyTorch - the modern tensor/autograd/training-loop workflow.
 
-<a id="prerequisites"></a>
-![prerequisites](assets/road_map_sections/prereqs.png)
+## Understanding Research vs Engineering
 
-**Programming**
-- [CS50](https://cs50.harvard.edu/x/2024/weeks/0/) by Harvard — Intro to programming
-- [Google's Python Class](https://developers.google.com/edu/python) — Python basics
-- [NumPy Tutorial](https://numpy.org/doc/stable/user/quickstart.html) — Array operations
-- [Pandas Course](https://www.kaggle.com/learn/pandas) by Kaggle — Data manipulation
+Big problem: AI resources mix research results, engineering patterns, benchmark claims, and product advice. You need to know which kind of claim you are reading before deciding what to trust or build.
 
-**Math**
-> [!TIP]
-> 💰 This entire section can be streamlined via Tivadar Danka's [Mathematics of Machine Learning](https://www.packtpub.com/en-us/product/mathematics-of-machine-learning-9781837027873) book. It goes through all of the math topics in this section and more.
-- [Algebra](https://www.khanacademy.org/math/algebra-home) by Khan Academy
-- [Linear Algebra](https://www.khanacademy.org/math/linear-algebra) by Khan Academy
-- [Probability](https://cs50.harvard.edu/ai/2024/weeks/2/) by Harvard
-- [Derivatives](https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives) by Khan Academy
-- [Backpropagation Visualization](https://developers-dot-devsite-v2-prod.appspot.com/machine-learning/crash-course/backprop-scroll/) by Google
+Workflow:
 
-**Tools**
-- [Git](https://git-scm.com/book/en/v2)
-- [GitHub](https://docs.github.com/en/get-started)
-- [Shell](https://www.learnshell.org)
+1. Ask whether the resource is explaining a model capability, an implementation trick, an eval result, or a production operating lesson.
+2. For research, skim the abstract, figures, results, and limitations before reading linearly.
+3. Trace backward to the papers it builds on and forward to the papers that cite it.
+4. Check whether the benchmark, dataset, or demo actually tests the claimed capability.
+5. For engineering, look for code, data, ablations, failure cases, operating constraints, and independent replications.
 
-**Ethics**
-- [AI Ethics](https://www.kaggle.com/learn/ai-ethics) by Kaggle
+Resources:
 
----
+1. [How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf) by S. Keshav - a practical three-pass method for reading technical papers.
+2. [Semantic Scholar](https://www.semanticscholar.org/) - use citation graphs to find the papers before and after a result.
+3. [Hugging Face Papers](https://huggingface.co/papers) and [Papers With Code](https://paperswithcode.com/) - use them for discovery, code, datasets, and benchmark context.
+4. [AI Index 2025](https://arxiv.org/abs/2504.07139) by Stanford HAI - an annual map of progress, investment, adoption, and benchmark movement.
 
-<a id="machine-learning"></a>
-![ml fundamentals](assets/road_map_sections/ml_fundamentals.png)
+## Core ML Principles
 
-**Fundamentals**
-- [What is Machine Learning?](https://developers.google.com/machine-learning/intro-to-ml) by Google — 20 min overview
-- [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) by Google — Full course covering regression, classification, neural networks, embeddings, LLMs
-- [Spinning Up in RL](https://spinningup.openai.com/en/latest/) by OpenAI — Reinforcement learning
-- 💰 [The RLHF Book](https://rlhfbook.com/) by Nathan Lambert — Deep dive into reinforcement learning from human feedback
+Big problem: most AI failures still come from basic ML mistakes: bad splits, leakage, weak baselines, wrong metrics, distribution shift, and confusing demos with evidence.
 
-> [!TIP]
-> 💰 I highly recommend reading Sebastian Raschka's book [Machine Learning Q and AI](https://www.amazon.com/Machine-Learning-AI-Essential-Questions/dp/1718503768/) to get a deeper understanding of fundamental machine learning and AI topics.
+1. [A Few Useful Things to Know About Machine Learning](https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf) by Pedro Domingos - the shortest serious essay on generalization, overfitting, data, and model selection.
+2. [Machine Learning Yearning](https://www.deeplearning.ai/machine-learning-yearning/) by Andrew Ng - a practical playbook for error analysis, train/dev/test splits, and iteration strategy.
+3. [Rules of Machine Learning](https://developers.google.com/machine-learning/guides/rules-of-ml/) by Martin Zinkevich - durable engineering lessons for launching and improving ML systems.
+4. [Machine Learning Explainability](https://www.kaggle.com/learn/machine-learning-explainability) by Kaggle - quick tools for inspecting what a model learned and where it may be brittle.
 
-**NLP & LLMs**
-- [Intro to LLMs](https://www.youtube.com/watch?v=zjkBMFhNj_g) by Andrej Karpathy
-- [LLM Course](https://github.com/mlabonne/llm-course) by Maxime Labonne — Roadmaps, Colab notebooks, covers fundamentals to fine-tuning
-- [Learning to Reason with LLMs](https://openai.com/index/learning-to-reason-with-llms/) by OpenAI — How reasoning models work
+## Data, Training Signals, and Synthetic Data
 
-> [!TIP]
-> 💰 You can learn how to build your own GPT-3 level LLM step-by-step in Sebastian Raschka's book [Build an LLM From Scratch](https://www.amazon.com/Build-Large-Language-Model-Scratch/dp/1633437167/).
+Big problem: models learn from the distribution, quality, labels, filtering, incentives, and leakage in their data.
 
-**Applications**
-- [Computer Vision](https://www.kaggle.com/learn/computer-vision) by Kaggle
-- [NLP Course](https://huggingface.co/learn/nlp-course/chapter1/1) by HuggingFace
-- [ML Explainability](https://www.kaggle.com/learn/machine-learning-explainability) by Kaggle
-- [Knowledge Distillation](https://github.com/dkozlov/awesome-knowledge-distillation) by Dmitry Kozlov
-- [ML for Science](https://ml-science-book.com/) by Molnar & Freiesleben
-- [ML for Games](https://huggingface.co/learn/ml-games-course/unit0/introduction) by HuggingFace
+1. [Datasheets for Datasets](https://arxiv.org/abs/1803.09010) by Gebru et al. - the canonical argument for documenting dataset motivation, composition, collection, and use.
+2. [Data Cascades in High-Stakes AI](https://research.google/pubs/data-cascades-in-high-stakes-ai/) by Sambasivan et al. - a grounded look at how data problems compound in real ML systems.
+3. [DataComp](https://arxiv.org/abs/2304.14108) by Gadre et al. - a controlled benchmark for studying dataset curation choices.
+4. [Self-Instruct](https://arxiv.org/abs/2212.10560) by Wang et al. - the classic recipe for bootstrapping instruction data from model outputs.
 
-**Hands-On**
-- [Build a Recommendation System](./recommendation-system/) — Collaborative filtering with PyTorch by Logan Thorneloe
+## Evaluation, Benchmarks, and Reliability
 
-More coming soon to this section...
+Big problem: AI work is not real until you can measure whether behavior improved, regressed, or failed in a new way.
 
----
+1. [Your AI Product Needs Evals](https://hamel.dev/blog/posts/evals/) by Hamel Husain - the strongest practical argument for evals as product development.
+2. [HELM](https://arxiv.org/abs/2211.09110) by Liang et al. - a serious framework for broader language-model evaluation.
+3. [Benchmark Data Contamination in LLMs: A Survey](https://arxiv.org/abs/2406.04244) by Li and Flanigan - a useful map of leakage, benchmark validity, and contaminated evals.
+4. [Using the Evaluation Tool](https://platform.claude.com/docs/en/test-and-evaluate/eval-tool) by Anthropic - concrete mechanics for prompt, model, and task evaluation.
 
-<a id="ai-engineering"></a>
-![ai engineering](assets/road_map_sections/ai_engineering.png)
+## MLOps and AI Operations
 
-**Building with LLMs**
-- [Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) by Anthropic
-- [Building Effective Agents](https://docs.anthropic.com/en/docs/build-with-claude/agentic-systems) by Anthropic
-- [Testing and Evaluation](https://docs.anthropic.com/en/docs/build-with-claude/develop-tests) by Anthropic
+Big problem: models become products only when data, deployment, monitoring, ownership, and iteration loops survive contact with production.
 
-**RAG & Infrastructure**
-- [MCP Documentation](https://modelcontextprotocol.io/) — Connecting AI to external tools
-- [Building Agentic RAG](https://www.deeplearning.ai/short-courses/building-agentic-rag-with-llamaindex/) by DeepLearning.AI
-- [Vector Databases Explained](https://www.pinecone.io/learn/vector-database/) by Pinecone
+1. [Designing Machine Learning Systems](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) by Chip Huyen - optional paid book; the best durable reference for production ML and AI ops.
+2. [Hidden Technical Debt in Machine Learning Systems](https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems) by Sculley et al. - the classic paper on why production ML complexity compounds.
+3. [Full Stack Deep Learning](https://fullstackdeeplearning.com/course/) - an end-to-end view of training, deploying, and operating deep learning systems.
+4. [Made With ML](https://madewithml.com/) by Goku Mohandas - practical MLOps lessons from product framing through monitoring.
 
-**Fine-Tuning & Local Models**
-- [LoRA and PEFT](https://huggingface.co/learn/smol-course/en/unit1/3a) by HuggingFace — Parameter-efficient fine-tuning
-- [How to Set Up Your Own Local Coding Model](https://www.aiforswes.com/p/you-dont-need-to-spend-100mo-on-claude) by Logan Thorneloe
+## Model Architectures and Reasoning
 
----
+Big problem: how do architecture, scale, modality, prompting, and test-time compute produce useful model behavior?
 
-<a id="ml-engineering"></a>
-![ml engineering](assets/road_map_sections/ml_engineering.png)
+1. [Intro to Large Language Models](https://www.youtube.com/watch?v=zjkBMFhNj_g) by Andrej Karpathy - the best high-level explanation of what LLMs are and how they are trained.
+2. [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) by Jay Alammar - the clearest visual bridge into attention and transformer blocks.
+3. [Attention Is All You Need](https://arxiv.org/abs/1706.03762) by Vaswani et al. - the original transformer paper; read it for the mechanism, not the hype.
+4. [Mamba](https://arxiv.org/abs/2312.00752) by Gu and Dao - the modern state-space alternative to attention for long sequence modeling.
+5. [Learning to Reason with LLMs](https://openai.com/index/learning-to-reason-with-llms/) by OpenAI - useful framing for train-time and test-time compute in reasoning models.
 
-> [!TIP]
-> 💰 [ML School](https://www.ml.school/) by Santiago is a hands-on live cohort covering MLOps and many of the machine learning topics above.
+## Memory and Continual Learning
 
-- [Made with ML](https://madewithml.com/) by Goku Mohandas — Complete MLOps course from design to production
-- [ML Efficiency](https://www.youtube.com/playlist?list=PL80kAHvQbh-pT4lCkDT53zT8DKmhE0idB) by MIT
-- [GPU Performance Engineering Resources](https://github.com/wafer-ai/gpu-perf-engineering-resources) by Wafer AI
-- [MLOps Community](https://mlops.community/) — Community for MLOps practitioners
+Big problem: useful AI systems need to handle new information, changing users, and nonstationary environments without forgetting what already works.
 
-> [!TIP]
-> 💰 For deeper understanding, read [Designing Machine Learning Systems](https://www.amazon.com/dp/1098107969) by Chip Huyen — covers the architecture and trade-offs of production ML systems.
+1. [Continual Lifelong Learning with Neural Networks](https://arxiv.org/abs/1802.07569) by Parisi et al. - the standard review of catastrophic forgetting and continual-learning strategies.
+2. [Overcoming Catastrophic Forgetting in Neural Networks](https://arxiv.org/abs/1612.00796) by Kirkpatrick et al. - the elastic weight consolidation paper; read for the core forgetting problem.
+3. [Continual Learning for Large Language Models: A Survey](https://arxiv.org/abs/2402.01364) by Wu et al. - maps continual pretraining, instruction tuning, alignment, and evaluation for LLMs.
+4. [MemGPT](https://arxiv.org/abs/2310.08560) by Packer et al. - a practical framing of external memory management for long-running LLM agents.
 
----
+## Retrieval and Context
 
-<a id="interview-prep"></a>
-## Interview Prep
+Big problem: models are limited by context, freshness, provenance, and the quality of the information they can access.
 
-- 💰 Elements of Programming Interviews
-  - [Python](https://www.amazon.com/Elements-Programming-Interviews-Python-Insiders/dp/1537713949/)
-  - [Java](https://www.amazon.com/Elements-Programming-Interviews-Java-Insiders/dp/1517671272/)
-  - [C++](https://www.amazon.com/Elements-Programming-Interviews-Insiders-Guide/dp/1479274836/)
-- 💰 System Design Interview by Alex Xu
-  - [Volume 1](https://www.amazon.com/System-Design-Interview-insiders-Second/dp/B08CMF2CQF/)
-  - [Volume 2](https://www.amazon.com/System-Design-Interview-Insiders-Guide/dp/1736049119/)
-- [Study Plan for ML Interviews](https://github.com/khangich/machine-learning-interview) by Khang Pham
+1. [The Illustrated Word2vec](https://jalammar.github.io/illustrated-word2vec/) by Jay Alammar - the best visual starting point for embeddings and vector similarity.
+2. [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401) by Lewis et al. - the original RAG paper; read for the problem framing.
+3. [Lost in the Middle](https://arxiv.org/abs/2307.03172) by Liu et al. - shows why long context is not the same as reliable use of context.
+4. [Building Agentic RAG with LlamaIndex](https://www.deeplearning.ai/courses/building-agentic-rag-with-llamaindex) by DeepLearning.AI - a compact hands-on bridge from retrieval to agentic workflows.
 
----
+## Agents and Tool Use
 
-<a id="free-compute"></a>
-## Free Compute
+Big problem: how do we make models take actions through tools without turning the system into an unreliable loop?
 
-| Resource | What You Get |
-|----------|--------------|
-| [Google Colab](https://colab.google/) | Free T4/P100 GPUs |
-| [Kaggle Notebooks](https://www.kaggle.com/code) | 30 hours/week GPU |
-| [Lightning AI](https://lightning.ai/) | 22 GPU hours free |
-| [Google Cloud](https://cloud.google.com/gpu) | $300 free credits |
-| [Amazon SageMaker](https://aws.amazon.com/machine-learning/accelerate-machine-learning-P3/) | Free tier |
-| [Paperspace Gradient](https://www.paperspace.com/notebooks) | Free community tier |
+1. [Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents) by Anthropic - practical patterns for workflows, agents, tools, and when to keep things simple.
+2. [ReAct](https://arxiv.org/abs/2210.03629) by Yao et al. - the canonical paper on interleaving reasoning traces and tool actions.
+3. [Toolformer](https://arxiv.org/abs/2302.04761) by Schick et al. - a useful research framing for models learning when to call tools.
+4. [12-Factor Agents](https://github.com/humanlayer/12-factor-agents) by HumanLayer - production design principles for controlling prompts, context, tools, and state.
 
----
+## Post-Training and Alignment
 
-**Subscribe to [AI for Software Engineers](https://aiforswes.com/)** for more resources.
+Big problem: base models are rarely the product; behavior comes from instruction tuning, preference data, adapters, distillation, and feedback.
 
-**Support the creators!** Buy the books, leave reviews, follow the authors.
+1. [Training Language Models to Follow Instructions with Human Feedback](https://arxiv.org/abs/2203.02155) by Ouyang et al. - the InstructGPT paper; read for the supervised/RLHF pipeline.
+2. [RLHF Book](https://rlhfbook.com/) by Nathan Lambert - the best structured path into preference data, reward models, and post-training.
+3. [Direct Preference Optimization](https://arxiv.org/abs/2305.18290) by Rafailov et al. - the cleanest starting point for preference optimization without an explicit reward model.
+4. [PEFT](https://huggingface.co/docs/peft/index) by Hugging Face - the standard starting point for LoRA and adapter-based fine-tuning.
+5. [Distilling the Knowledge in a Neural Network](https://arxiv.org/abs/1503.02531) by Hinton, Vinyals, and Dean - the classic paper on compressing useful behavior into smaller models.
 
-**Want to contribute?** See [CONTRIBUTING.md](./CONTRIBUTING.md) to add your resources to this roadmap.
+## Training and Inference Infrastructure
 
-**Questions?** [Message me on X](https://x.com/loganthorneloe)
+Big problem: capability is constrained by GPUs, memory bandwidth, distributed training, serving latency, and cost.
+
+1. [Machine Learning Systems](https://mlsysbook.ai/) - a free systems-level book on the hardware and software stack behind ML.
+2. [The Ultra-Scale Playbook](https://huggingface.co/spaces/nanotron/ultrascale-playbook) by Hugging Face/nanotron - high-quality intuition for distributed training and GPU bottlenecks.
+3. [Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556) by Hoffmann et al. - the Chinchilla paper; read for compute, data, and model-size tradeoffs.
+4. [FlashAttention](https://arxiv.org/abs/2205.14135) by Dao et al. - the paper that makes attention performance feel like a memory-traffic problem.
+5. [PagedAttention](https://arxiv.org/abs/2309.06180) by Kwon et al. - the key serving idea behind vLLM-style high-throughput inference.
+
+## Local and Open Models
+
+Big problem: how much can you do without closed model APIs, and what tradeoffs matter for inference, privacy, cost, and control?
+
+1. [LLM Course](https://huggingface.co/learn/llm-course/chapter1/1) by Hugging Face - the ecosystem tour for tokenizers, Transformers, datasets, fine-tuning, and the Hub.
+2. [llama.cpp](https://github.com/ggml-org/llama.cpp) by ggml-org - the practical reference point for local inference and quantized models.
+3. [Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard) by Hugging Face - a useful snapshot of open-model tradeoffs and benchmark caveats.
+4. [Model Cards](https://huggingface.co/docs/hub/model-cards) by Hugging Face - the habit to build before downloading any open model: read license, data, intended use, and limitations.
+
+## Interpretability, Safety, and Security
+
+Big problem: how do we understand, constrain, secure, and govern systems whose behavior is learned rather than directly programmed?
+
+1. [The Building Blocks of Interpretability](https://distill.pub/2018/building-blocks/) by Olah et al. - visual intuition for hidden representations and interpretability interfaces.
+2. [A Mathematical Framework for Transformer Circuits](https://transformer-circuits.pub/2021/framework/index.html) by Elhage et al. - the clearest entry into mechanistic interpretability for transformers.
+3. [Concrete Problems in AI Safety](https://arxiv.org/abs/1606.06565) by Amodei et al. - a practical taxonomy of accidents, reward hacking, shift, and supervision.
+4. [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/) by OWASP - the shortest serious map of LLM application security risks.
+5. [AI Risk Management Framework](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) by NIST - governance vocabulary for mapping, measuring, managing, and monitoring AI risk.
+
+If you are new and only want one hands-on project after the quick start, use the local [recommendation system](./recommendation-system/). It makes embeddings and training loops concrete without requiring frontier-model infrastructure.
+
+**Questions?** [Message me on X](https://x.com/loganthorneloe).
