@@ -1,586 +1,104 @@
-# AI Problems Guide
+![AI for Software Engineers](assets/ai-for-swes.png)
 
-An opinionated guide to understanding the biggest problem spaces in modern AI.
+# AI Foundations for Software Engineers
 
-This is not a complete curriculum. It is a short map of unusually good resources that build intuition quickly. The bias is toward fewer, higher-quality resources over long lists.
+**AI needs more software engineers.**
 
-Use it like this:
+Recent advancements in modern AI have made it one of the most life-changing technologies of our time, but it can only be effective if applied successfully. This repo contains the resources software engineers need to build a foundational understanding of AI.
 
-1. Read `Machine Learning Quick Start` if you cannot explain features, labels, loss, gradients, overfitting, tokens, attention, and evals.
-2. Read `Understanding Research vs Engineering` so you can tell when a resource is explaining a scientific result versus a production practice.
-3. Scan the problem spaces below and pick the one that feels most interesting or useful.
-4. Read the resources in that section in order.
-5. Build or reproduce something small before collecting more links.
+It's split into five sections intended to be worked in order:
 
-This is an **[AI for Software Engineers](https://aiforswes.com)** resource. **[Subscribe](https://aiforswes.com/subscribe)** for more fundamentals and technical deep dives.
+1. [General Resources](#general-resources)
+2. [ML Foundations](#ml-foundations)
+3. [LLMs](#llms)
+4. [Engineering](#engineering)
+5. [Hands-on Guides](#hands-on-guides)
 
-## Table of Contents
+The guide follows these principles:
 
-1. [**Machine Learning Quick Start**](#machine-learning-quick-start)
+* **A solid foundation is most important.** Technologies used to build systems change over time, but their foundations don't. Building a solid foundation makes learning everything else easier.
+* **Simplicity is king.** This learning roadmap is intentionally lean, while its technical resources go deep into topics. It's purpose-built to help busy professionals build intuition for how AI systems function without wasting time.
+* **You don't understand what you can't build.** Many resources contain hands-on guides. Getting into the code is the best (and most fun) way to understand a topic and the only way to gain practical engineering experience.
 
-   Get the minimum machine learning vocabulary and training-loop intuition before specializing.
+This guide assumes the reader has prior experience with programming. Feel free to skip around between resources if you have a background in some topics but not others. Don't treat this as a definitive list of AI resources—there are many excellent AI learning resources. I share great resources as I find them on [X](https://x.com/loganthorneloe).
 
-   - [The Hundred-Page Machine Learning Book](#the-hundred-page-machine-learning-book-by-andriy-burkov)
-   - [The Deep Learning Math Workbook](#the-deep-learning-math-workbook-by-professor-tom-yeh)
-   - [Mathematics of Machine Learning](#mathematics-of-machine-learning-by-tivadar-danka)
-   - [Intro to Machine Learning](#intro-to-machine-learning-by-kaggle)
-   - [Neural Networks](#neural-networks-by-3blue1brown)
-   - [Deep Learning with Python, Third Edition](#deep-learning-with-python-third-edition-by-francois-chollet-and-matthew-watson)
-   - [Elements of Programming Interviews in Python](#elements-of-programming-interviews-in-python-by-adnan-aziz-tsung-hsien-lee-and-amit-prakash)
-   - [Practical Deep Learning for Coders](#practical-deep-learning-for-coders-by-fastai)
-   - [Learn the Basics](#learn-the-basics-by-pytorch)
+The best way to support this guide is by starring it and supporting the authors of the resources. If you're interested in more guides like this, subscribe to the [**AI for Software Engineers**](https://aiforswes.com/subscribe) newsletter. Feedback is appreciated.
 
-2. [**Understanding Research vs Engineering**](#understanding-research-vs-engineering)
+Enjoy! 🚀
 
-   Learn how to separate research claims, machine learning engineering lessons, and agentic engineering patterns.
+## General Resources
 
-   - [How to Read a Paper](#how-to-read-a-paper-by-s-keshav)
-   - [The Art of Doing Science and Engineering](#the-art-of-doing-science-and-engineering-by-richard-hamming)
-   - [Semantic Scholar](#semantic-scholar)
-   - [Hugging Face Papers and Papers With Code](#hugging-face-papers-and-papers-with-code)
-   - [AI Index 2025](#ai-index-2025-by-stanford-hai)
+General resources for software design and technical judgment that help when engineering AI systems. Consider these *optional*.
 
-3. [**Core Machine Learning Principles**](#core-machine-learning-principles)
+- **[The Art of Doing Science and Engineering: Learning to Learn](https://press.stripe.com/the-art-of-doing-science-and-engineering)** by Richard W. Hamming  
+  Two of the most important things to understand as an engineer working in AI are that AI is fundamentally a research discipline and that continued learning matters as much in AI as it does in software engineering. This book helps readers understand both. There is also a [shorter essay version](https://www.cs.utexas.edu/~dahlin/bookshelf/hamming.html) of this you can read if you prefer.
 
-   Build durable intuition for generalization, leakage, baselines, metrics, and debugging.
+- **[A Philosophy of Software Design](https://www.amazon.com/dp/173210221X)** by John Ousterhout  
+  This teaches a useful way to think about software design. It is particularly helpful for managing system complexity, an increasingly important consideration as AI makes software systems more complex.
 
-   - [A Few Useful Things to Know About Machine Learning](#a-few-useful-things-to-know-about-machine-learning-by-pedro-domingos)
-   - [Machine Learning Yearning](#machine-learning-yearning-by-andrew-ng)
-   - [Rules of Machine Learning](#rules-of-machine-learning-by-martin-zinkevich)
-   - [Machine Learning Explainability](#machine-learning-explainability-by-kaggle)
+## ML Foundations
 
-4. [**Data, Training Signals, and Synthetic Data**](#data-training-signals-and-synthetic-data)
+Resources for understanding the foundations of machine learning from the bottom up.
 
-   Understand how data quality, labels, curation, feedback, and synthetic data shape behavior.
+- **[The Hundred-Page Machine Learning Book](https://themlbook.com/)** by Andriy Burkov  
+  This is the best short overview of machine learning. It goes into enough depth for the reader to get something substantial out of it without making the topics unapproachable. It's a great way to get started. After reading this, you'll have a good sense of whether ML/AI is something you would enjoy. The book has an [accompanying repo](https://github.com/aburkov/theMLbook).
 
-   - [Datasheets for Datasets](#datasheets-for-datasets-by-gebru-et-al)
-   - [Data Cascades in High-Stakes AI](#data-cascades-in-high-stakes-ai-by-sambasivan-et-al)
-   - [DataComp](#datacomp-by-gadre-et-al)
-   - [Self-Instruct](#self-instruct-by-wang-et-al)
+- **[Hands-On Machine Learning with Scikit-Learn and PyTorch](https://www.oreilly.com/library/view/hands-on-machine-learning/9798341607972/)** by Aurélien Géron  
+  This book is the gold standard for getting hands-on with machine learning. You'll build a machine learning project end-to-end and get hands-on experience with the most important technologies and techniques in AI. Unlike the book above, this goes into great depth but covers many important topics in a single resource. The [accompanying repo](https://github.com/ageron/handson-mlp) includes notebooks and exercise solutions.
 
-5. [**Evaluation, Benchmarks, and Reliability**](#evaluation-benchmarks-and-reliability)
+- **[Mathematics of Machine Learning](https://www.packtpub.com/en-us/product/mathematics-of-machine-learning-9781837027873)** by Tivadar Danka  
+  This book teaches the linear algebra, probability, calculus, and optimization foundations that make models easier to reason about. This is another great resource that covers everything you need to know about ML math in a single book. Most engineers skip this part, but as AI advances, an understanding of the math behind it becomes more important. The book has an [accompanying repo](https://github.com/cosmic-cortex/mathematics-of-machine-learning-book).
 
-   Learn how to tell whether a model or AI product actually got better.
+## LLMs
 
-   - [Your AI Product Needs Evals](#your-ai-product-needs-evals-by-hamel-husain)
-   - [HELM](#helm-by-liang-et-al)
-   - [Benchmark Data Contamination in LLMs: A Survey](#benchmark-data-contamination-in-llms-a-survey-by-li-and-flanigan)
-   - [Using the Evaluation Tool](#using-the-evaluation-tool-by-anthropic)
+Resources for understanding large language models, the most important topic in modern AI.
 
-6. [**Machine Learning Systems Engineering**](#machine-learning-systems-engineering)
+- **[The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)** by Jay Alammar, with **[Transformer Series](https://www.3blue1brown.com/topics/neural-networks)** by 3Blue1Brown as the deeper visual companion  
+  The transformer architecture is the most important concept to grasp when learning how LLMs work. Both resources teach it visually.
 
-   See what it takes to deploy, monitor, own, and improve learned systems in production.
+- **[Build a Large Language Model (From Scratch)](https://www.manning.com/books/build-a-large-language-model-from-scratch)** by Sebastian Raschka  
+  This book walks through tokenization, embeddings, attention, transformer blocks, training, and fine-tuning so the pieces of an LLM become concrete. It takes you from zero to training your own LLM. The [accompanying repo](https://github.com/rasbt/LLMs-from-scratch) contains the code and exercises.
 
-   - [Designing Machine Learning Systems](#designing-machine-learning-systems-by-chip-huyen)
-   - [Designing Data-Intensive Applications](#designing-data-intensive-applications-by-martin-kleppmann)
-   - [Hidden Technical Debt in Machine Learning Systems](#hidden-technical-debt-in-machine-learning-systems-by-sculley-et-al)
-   - [Full Stack Deep Learning](#full-stack-deep-learning)
-   - [Made With ML](#made-with-ml-by-goku-mohandas)
+- **[Build a Reasoning Model (From Scratch)](https://www.manning.com/books/build-a-reasoning-model-from-scratch)** by Sebastian Raschka  
+  Reasoning models have become fundamental to real-world AI applications. This book builds intuition for reasoning models by walking through the pieces needed to create one yourself and showing how the surrounding data, training process, and evaluation loop shape the behavior you see. This resource has an [accompanying repo](https://github.com/rasbt/reasoning-from-scratch).
 
-7. [**Model Architectures and Reasoning**](#model-architectures-and-reasoning)
+- **[The RLHF Book](https://www.manning.com/books/reinforcement-learning-from-human-feedback)** by Nathan Lambert  
+  Post-training is what turns a base language model into something that follows instructions and matches user expectations. Reinforcement learning is one important part of post-training. This book teaches preference data, reward modeling, reinforcement learning, and the tradeoffs behind shaping LLM behavior after pretraining. It has an [accompanying repo](https://github.com/natolambert/rlhf-book) and [lecture series](https://rlhfbook.com/course).
 
-   Study how architecture, scale, attention, sequence models, and test-time compute affect capability.
+## Engineering
 
-   - [Intro to Large Language Models](#intro-to-large-language-models-by-andrej-karpathy)
-   - [Build a Large Language Model From Scratch](#build-a-large-language-model-from-scratch-by-sebastian-raschka)
-   - [Build a Reasoning Model From Scratch](#build-a-reasoning-model-from-scratch-by-sebastian-raschka)
-   - [The Illustrated Transformer](#the-illustrated-transformer-by-jay-alammar)
-   - [Attention Is All You Need](#attention-is-all-you-need-by-vaswani-et-al)
-   - [Mamba](#mamba-by-gu-and-dao)
-   - [Learning to Reason with LLMs](#learning-to-reason-with-llms-by-openai)
+Resources for understanding the ML engineering, AI engineering, infrastructure, and operations work required to bring machine learning into real-world applications.
 
-8. [**Retrieval and Context**](#retrieval-and-context)
+- **[Designing Machine Learning Systems](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/)** by Chip Huyen  
+  Production ML is different from traditional software because system behavior depends on data distributions that can shift after launch. This book teaches the full production loop around data, model development, deployment, monitoring, and iteration. Its [accompanying repo](https://github.com/chiphuyen/dmls-book) contains chapter summaries and additional resources.
 
-   Learn how embeddings, grounding, RAG, long context, and provenance connect models to evidence.
+- **[AI Engineering](https://www.oreilly.com/library/view/ai-engineering/9781098166298/)** by Chip Huyen  
+  Building applications with foundation models introduces additional nondeterminism and complexity. This book teaches the application-layer concepts—context, evals, agents, retrieval, and more—required to build reliable AI applications. Its [accompanying repo](https://github.com/chiphuyen/aie-book) includes chapter summaries, examples, and case studies.
 
-   - [The Illustrated Word2vec](#the-illustrated-word2vec-by-jay-alammar)
-   - [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](#retrieval-augmented-generation-for-knowledge-intensive-nlp-tasks-by-lewis-et-al)
-   - [Lost in the Middle](#lost-in-the-middle-by-liu-et-al)
-   - [Building Agentic RAG with LlamaIndex](#building-agentic-rag-with-llamaindex-by-deeplearningai)
+- **[Designing Data-Intensive Applications](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/)** by Martin Kleppmann  
+  AI systems are data-intensive systems and require strong engineering to solve difficult data-system problems. This book is the gold standard for understanding these challenges and teaches storage, indexing, streams, replication, consistency, and distributed system tradeoffs. This book isn't AI-focused but teaches many required engineering concepts for building AI systems at scale.
 
-9. [**Agents, Memory, and Tool Use**](#agents-memory-and-tool-use)
+- **[Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)** by Anthropic  
+  Agent engineering is in high demand and an excellent way to apply LLMs in a way that's actually helpful. This short read teaches when a workflow is enough, when an agent is actually useful, and the practical patterns for tool use and orchestration. Anthropic provides [companion implementation notebooks](https://github.com/anthropics/claude-cookbooks/tree/main/patterns/agents).
 
-   Understand agent harnesses, tool calls, memory, state, handoffs, and action reliability.
+- **[Inference Engineering](https://www.baseten.co/inference-engineering/)** by Philip Kiely  
+  Serving machine learning models at scale is an incredible engineering feat. It requires an understanding of model architecture, serving technologies, and serving hardware to optimize serving systems for latency, reliability, and cost. This is one of the strongest current opportunities for software engineers in AI, and this book does the best job of laying out the information and making it easily understandable.
 
-   - [Building Effective Agents](#building-effective-agents-by-anthropic)
-   - [ReAct](#react-by-yao-et-al)
-   - [Toolformer](#toolformer-by-schick-et-al)
-   - [12-Factor Agents](#12-factor-agents-by-humanlayer)
-   - [MemGPT](#memgpt-by-packer-et-al)
-   - [Continual Lifelong Learning with Neural Networks](#continual-lifelong-learning-with-neural-networks-by-parisi-et-al)
+- **[How to Scale Your Model](https://jax-ml.github.io/scaling-book/)** by Google DeepMind  
+  Training large models is another incredible engineering feat and is as much a systems problem as a modeling problem. This online book builds intuition around accelerator parallelism, memory limits, communication costs, and the engineering tradeoffs behind scaling training efficiently. The [source repo](https://github.com/jax-ml/scaling-book) is available on GitHub.
 
-10. [**Post-Training and Alignment**](#post-training-and-alignment)
+## Hands-on Guides
 
-    Learn how base models become useful assistants through feedback, preference data, adapters, and distillation.
+Hands-on guides from the [AI for Software Engineers](https://aiforswes.com) newsletter that help you work directly with important AI technologies. **More coming soon!**
 
-    - [Training Language Models to Follow Instructions with Human Feedback](#training-language-models-to-follow-instructions-with-human-feedback-by-ouyang-et-al)
-    - [RLHF Book](#rlhf-book-by-nathan-lambert)
-    - [Direct Preference Optimization](#direct-preference-optimization-by-rafailov-et-al)
-    - [PEFT](#peft-by-hugging-face)
-    - [Distilling the Knowledge in a Neural Network](#distilling-the-knowledge-in-a-neural-network-by-hinton-vinyals-and-dean)
+- **[Run a Local Coding Model](https://www.aiforswes.com/p/you-dont-need-to-spend-100mo-on-claude)**  
+  *December 20, 2025 · [Repository](https://github.com/loganthorneloe/local-models)*  
+  Running a model locally is a good way to make open-model tradeoffs concrete. This guide teaches how to set up a local coding model, what the experience feels like compared to hosted coding assistants, and where local inference is useful.
 
-11. [**Training and Inference Infrastructure**](#training-and-inference-infrastructure)
+- **[Build a Simple Recommendation System](https://www.aiforswes.com/p/collaborative-filtering)**  
+  *November 11, 2025 · [Repository](https://github.com/loganthorneloe/recommendation-system)*  
+  Recommendation systems are a small but useful way to see ML ideas in code. This guide teaches collaborative filtering and makes features, similarity, sparse data, and user-item interaction data concrete.
 
-    Understand the GPU, distributed training, memory, serving, latency, and cost constraints behind capability.
+---
 
-    - [Machine Learning Systems](#machine-learning-systems)
-    - [Elements of Programming Interviews in C++](#elements-of-programming-interviews-in-c-by-adnan-aziz-tsung-hsien-lee-and-amit-prakash)
-    - [The Ultra-Scale Playbook](#the-ultra-scale-playbook-by-hugging-facenanotron)
-    - [Training Compute-Optimal Large Language Models](#training-compute-optimal-large-language-models-by-hoffmann-et-al)
-    - [FlashAttention](#flashattention-by-dao-et-al)
-    - [PagedAttention](#pagedattention-by-kwon-et-al)
-
-12. [**Local and Open Models**](#local-and-open-models)
-
-    Learn the tradeoffs around open weights, local inference, quantization, privacy, and model selection.
-
-    - [LLM Course](#llm-course-by-hugging-face)
-    - [llama.cpp](#llamacpp-by-ggml-org)
-    - [Open LLM Leaderboard](#open-llm-leaderboard-by-hugging-face)
-    - [Model Cards](#model-cards-by-hugging-face)
-
-13. [**Interpretability, Safety, and Security**](#interpretability-safety-and-security)
-
-    Learn how people inspect, constrain, secure, and govern learned systems.
-
-    - [The Building Blocks of Interpretability](#the-building-blocks-of-interpretability-by-olah-et-al)
-    - [A Mathematical Framework for Transformer Circuits](#a-mathematical-framework-for-transformer-circuits-by-elhage-et-al)
-    - [Concrete Problems in AI Safety](#concrete-problems-in-ai-safety-by-amodei-et-al)
-    - [OWASP Top 10 for LLM Applications](#owasp-top-10-for-llm-applications-by-owasp)
-    - [AI Risk Management Framework](#ai-risk-management-framework-by-nist)
-
-## Machine Learning Quick Start
-
-TODO: Write a quick blurb explaining why this section matters.
-
-### [The Hundred-Page Machine Learning Book](https://themlbook.com/) by Andriy Burkov
-
-Why read it: This is the shortest serious pass through classical ML, loss, optimization, generalization, and model selection.
-
-
-
-### The Deep Learning Math Workbook by Professor Tom Yeh
-
-Why read it: It belongs here if the goal is to make neural networks, gradients, tensors, and training math feel concrete instead of mysterious.
-
-
-
-### [Mathematics of Machine Learning](https://www.packtpub.com/en-us/product/mathematics-of-machine-learning-9781837027873) by Tivadar Danka
-
-Why read it: It gives a deeper structured path through linear algebra, calculus, and probability for machine learning.
-
-
-
-### [Intro to Machine Learning](https://www.kaggle.com/learn/intro-to-machine-learning) by Kaggle
-
-Why read it: It gets you training, validating, and debugging a small model in code instead of only reading definitions.
-
-
-
-### [Neural Networks](https://www.3blue1brown.com/topics/neural-networks) by 3Blue1Brown
-
-Why read it: It gives visual intuition for gradients, backpropagation, and representation learning before the math gets dense.
-
-
-
-### [Deep Learning with Python, Third Edition](https://www.manning.com/books/deep-learning-with-python-third-edition) by Francois Chollet and Matthew Watson
-
-Why read it: It is the practical deep learning book for understanding Keras-style model building, training, and modern neural network workflows.
-
-
-
-### [Elements of Programming Interviews in Python](https://www.amazon.com/Elements-Programming-Interviews-Python-Insiders/dp/1537713949) by Adnan Aziz, Tsung-Hsien Lee, and Amit Prakash
-
-Why read it: It belongs here if Python fluency is blocking you from implementing small models, data pipelines, or learning exercises.
-
-
-
-### [Practical Deep Learning for Coders](https://course.fast.ai/) by fast.ai
-
-Why read it: It builds deep learning intuition from working models and is especially strong for software engineers who learn by building.
-
-
-
-### [Learn the Basics](https://docs.pytorch.org/tutorials/beginner/basics/intro.html) by PyTorch
-
-Why read it: It teaches the modern tensor, autograd, dataset, model, and training-loop workflow used in real projects.
-
-## Understanding Research vs Engineering
-
-TODO: Write a quick blurb explaining why this section matters.
-
-### [How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf) by S. Keshav
-
-Why read it: It gives a practical three-pass method for reading technical papers without getting stuck in every detail.
-
-
-
-### [The Art of Doing Science and Engineering](https://www.stripe.press/art-of-doing-science-and-engineering) by Richard Hamming
-
-Why read it: It is the best mindset book here for choosing important problems, learning how to learn, and thinking clearly about technical work.
-
-
-
-### [Semantic Scholar](https://www.semanticscholar.org/)
-
-Why use it: Citation graphs help you find what a result builds on and which later papers took it seriously.
-
-
-
-### [Hugging Face Papers](https://huggingface.co/papers) and [Papers With Code](https://paperswithcode.com/)
-
-Why use them: They are useful for discovery, code, datasets, and benchmark context when a paper becomes part of the current conversation.
-
-
-
-### [AI Index 2025](https://arxiv.org/abs/2504.07139) by Stanford HAI
-
-Why read it: It gives a broad annual map of progress, investment, adoption, and benchmark movement so individual papers have context.
-
-## Core Machine Learning Principles
-
-TODO: Write a quick blurb explaining why this section matters.
-
-### [A Few Useful Things to Know About Machine Learning](https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf) by Pedro Domingos
-
-Why read it: It is a compact, durable explanation of generalization, overfitting, data, representation, and model selection.
-
-
-
-### [Machine Learning Yearning](https://www.deeplearning.ai/machine-learning-yearning/) by Andrew Ng
-
-Why read it: It teaches practical error analysis, train/dev/test splits, metric choice, and iteration strategy.
-
-
-
-### [Rules of Machine Learning](https://developers.google.com/machine-learning/guides/rules-of-ml/) by Martin Zinkevich
-
-Why read it: It captures hard-won lessons for launching, debugging, and improving ML systems over time.
-
-
-
-### [Machine Learning Explainability](https://www.kaggle.com/learn/machine-learning-explainability) by Kaggle
-
-Why read it: It gives quick tools for inspecting what a model learned and where that behavior may be brittle.
-
-## Data, Training Signals, and Synthetic Data
-
-TODO: Write a quick blurb explaining why this section matters.
-
-### [Datasheets for Datasets](https://arxiv.org/abs/1803.09010) by Gebru et al.
-
-Why read it: It teaches the habit of documenting dataset motivation, composition, collection process, intended use, and limitations.
-
-
-
-### [Data Cascades in High-Stakes AI](https://research.google/pubs/data-cascades-in-high-stakes-ai/) by Sambasivan et al.
-
-Why read it: It shows how messy data decisions compound into downstream model and product failures.
-
-
-
-### [DataComp](https://arxiv.org/abs/2304.14108) by Gadre et al.
-
-Why read it: It makes dataset curation feel like an experimental variable rather than background plumbing.
-
-
-
-### [Self-Instruct](https://arxiv.org/abs/2212.10560) by Wang et al.
-
-Why read it: It is the classic recipe for bootstrapping instruction data from model outputs, which is central to synthetic-data thinking.
-
-## Evaluation, Benchmarks, and Reliability
-
-TODO: Write a quick blurb explaining why this section matters.
-
-### [Your AI Product Needs Evals](https://hamel.dev/blog/posts/evals/) by Hamel Husain
-
-Why read it: It makes the practical case that evals are the core loop for building AI products, not an academic afterthought.
-
-
-
-### [HELM](https://arxiv.org/abs/2211.09110) by Liang et al.
-
-Why read it: It shows what broader language-model evaluation looks like when you measure multiple scenarios and metrics.
-
-
-
-### [Benchmark Data Contamination in LLMs: A Survey](https://arxiv.org/abs/2406.04244) by Li and Flanigan
-
-Why read it: It explains why benchmark results can be misleading when training data overlaps with evaluation data.
-
-
-
-### [Using the Evaluation Tool](https://platform.claude.com/docs/en/test-and-evaluate/eval-tool) by Anthropic
-
-Why read it: It turns evals into concrete mechanics for comparing prompts, models, and task behavior.
-
-## Machine Learning Systems Engineering
-
-TODO: Write a quick blurb explaining why this section matters.
-
-### [Designing Machine Learning Systems](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) by Chip Huyen
-
-Why read it: It is the best durable reference for production ML system design, from data loops to monitoring and deployment.
-
-
-
-### [Designing Data-Intensive Applications](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/) by Martin Kleppmann
-
-Why read it: It explains the distributed data systems ideas that machine learning systems inherit: storage, streams, replication, consistency, and reliability.
-
-
-
-### [Hidden Technical Debt in Machine Learning Systems](https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems) by Sculley et al.
-
-Why read it: It explains why production ML complexity compounds through data dependencies, feedback loops, configuration, and ownership gaps.
-
-
-
-### [Full Stack Deep Learning](https://fullstackdeeplearning.com/course/)
-
-Why read it: It gives an end-to-end view of training, deploying, and operating deep learning systems.
-
-
-
-### [Made With ML](https://madewithml.com/) by Goku Mohandas
-
-Why read it: It is a practical MLOps path from product framing through deployment and monitoring.
-
-## Model Architectures and Reasoning
-
-TODO: Write a quick blurb explaining why this section matters.
-
-### [Intro to Large Language Models](https://www.youtube.com/watch?v=zjkBMFhNj_g) by Andrej Karpathy
-
-Why watch it: It is the clearest high-level explanation of what LLMs are, how they are trained, and why they behave the way they do.
-
-
-
-### [Build a Large Language Model From Scratch](https://www.manning.com/books/build-a-large-language-model-from-scratch) by Sebastian Raschka
-
-Why read it: It gives the code-level path from tokenizer and transformer blocks through pretraining and fine-tuning.
-
-
-
-### [Build a Reasoning Model From Scratch](https://www.manning.com/books/build-a-reasoning-model-from-scratch) by Sebastian Raschka
-
-Why read it: It is the hands-on bridge from general LLM mechanics into reasoning datasets, reinforcement learning, and verifiable rewards.
-
-
-
-### [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) by Jay Alammar
-
-Why read it: It gives the best visual bridge into attention and transformer blocks before reading the original paper.
-
-
-
-### [Attention Is All You Need](https://arxiv.org/abs/1706.03762) by Vaswani et al.
-
-Why read it: It is the original transformer paper and the cleanest source for the mechanism that reshaped modern AI.
-
-
-
-### [Mamba](https://arxiv.org/abs/2312.00752) by Gu and Dao
-
-Why read it: It introduces the modern state-space alternative to attention for long sequence modeling.
-
-
-
-### [Learning to Reason with LLMs](https://openai.com/index/learning-to-reason-with-llms/) by OpenAI
-
-Why read it: It frames how train-time and test-time compute can change reasoning behavior in modern models.
-
-## Retrieval and Context
-
-TODO: Write a quick blurb explaining why this section matters.
-
-### [The Illustrated Word2vec](https://jalammar.github.io/illustrated-word2vec/) by Jay Alammar
-
-Why read it: It is the best visual starting point for embeddings, vector similarity, and learned representations.
-
-
-
-### [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401) by Lewis et al.
-
-Why read it: It is the original RAG paper and explains the core problem framing behind retrieval-augmented generation and grounded answers.
-
-
-
-### [Lost in the Middle](https://arxiv.org/abs/2307.03172) by Liu et al.
-
-Why read it: It shows why long context is not the same as reliable use of context or reliable grounding.
-
-
-
-### [Building Agentic RAG with LlamaIndex](https://www.deeplearning.ai/courses/building-agentic-rag-with-llamaindex) by DeepLearning.AI
-
-Why take it: It gives a compact hands-on bridge from retrieval systems to agentic workflows.
-
-## Agents, Memory, and Tool Use
-
-TODO: Write a quick blurb explaining why this section matters.
-
-### [Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents) by Anthropic
-
-Why read it: It gives practical patterns for workflows, agent harnesses, tools, and when to keep systems simple.
-
-
-
-### [ReAct](https://arxiv.org/abs/2210.03629) by Yao et al.
-
-Why read it: It is the canonical paper on interleaving reasoning traces and tool actions.
-
-
-
-### [Toolformer](https://arxiv.org/abs/2302.04761) by Schick et al.
-
-Why read it: It gives a research framing for how models can learn when tool calls are useful.
-
-
-
-### [12-Factor Agents](https://github.com/humanlayer/12-factor-agents) by HumanLayer
-
-Why read it: It gives production design principles for agent harnesses that control prompts, context, tools, state, and human feedback.
-
-
-
-### [MemGPT](https://arxiv.org/abs/2310.08560) by Packer et al.
-
-Why read it: It gives a practical framing of external memory management for long-running LLM agents.
-
-
-
-### [Continual Lifelong Learning with Neural Networks](https://arxiv.org/abs/1802.07569) by Parisi et al.
-
-Why read it: It explains catastrophic forgetting and the continual-learning strategies behind durable agent memory.
-
-## Post-Training and Alignment
-
-TODO: Write a quick blurb explaining why this section matters.
-
-### [Training Language Models to Follow Instructions with Human Feedback](https://arxiv.org/abs/2203.02155) by Ouyang et al.
-
-Why read it: It is the InstructGPT paper and explains the supervised tuning plus RLHF pipeline that shaped modern assistants.
-
-
-
-### [RLHF Book](https://rlhfbook.com/) by Nathan Lambert
-
-Why read it: It is the best structured path into preference data, reward models, policy optimization, and post-training tradeoffs.
-
-
-
-### [Direct Preference Optimization](https://arxiv.org/abs/2305.18290) by Rafailov et al.
-
-Why read it: It is the cleanest starting point for preference optimization without training an explicit reward model.
-
-
-
-### [PEFT](https://huggingface.co/docs/peft/index) by Hugging Face
-
-Why read it: It is the standard practical starting point for LoRA and adapter-based fine-tuning.
-
-
-
-### [Distilling the Knowledge in a Neural Network](https://arxiv.org/abs/1503.02531) by Hinton, Vinyals, and Dean
-
-Why read it: It is the classic paper on compressing useful behavior into smaller models.
-
-## Training and Inference Infrastructure
-
-TODO: Write a quick blurb explaining why this section matters.
-
-### [Machine Learning Systems](https://mlsysbook.ai/)
-
-Why read it: It explains the hardware and software stack behind ML systems without assuming you already live in infrastructure.
-
-
-
-### [Elements of Programming Interviews in C++](https://www.amazon.com/Elements-Programming-Interviews-Adnan-Aziz/dp/1479274836) by Adnan Aziz, Tsung-Hsien Lee, and Amit Prakash
-
-Why read it: It belongs here because C++ fluency matters when reading performance-sensitive inference, kernels, runtimes, and systems code.
-
-
-
-### [The Ultra-Scale Playbook](https://huggingface.co/spaces/nanotron/ultrascale-playbook) by Hugging Face/nanotron
-
-Why read it: It gives unusually clear intuition for distributed training, parallelism, GPU memory, and bottlenecks.
-
-
-
-### [Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556) by Hoffmann et al.
-
-Why read it: It is the Chinchilla paper and explains compute, data, and model-size tradeoffs.
-
-
-
-### [FlashAttention](https://arxiv.org/abs/2205.14135) by Dao et al.
-
-Why read it: It makes attention performance feel like a memory-traffic problem rather than only a math problem.
-
-
-
-### [PagedAttention](https://arxiv.org/abs/2309.06180) by Kwon et al.
-
-Why read it: It explains the key serving idea behind vLLM-style high-throughput inference.
-
-## Local and Open Models
-
-TODO: Write a quick blurb explaining why this section matters.
-
-### [LLM Course](https://huggingface.co/learn/llm-course/chapter1/1) by Hugging Face
-
-Why read it: It is the ecosystem tour for tokenizers, Transformers, datasets, fine-tuning, and the Hub.
-
-
-
-### [llama.cpp](https://github.com/ggml-org/llama.cpp) by ggml-org
-
-Why read it: It is the practical reference point for local inference and quantized models.
-
-
-
-### [Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard) by Hugging Face
-
-Why use it: It is a useful snapshot of open-model tradeoffs, but only if you read it with benchmark caveats in mind.
-
-
-
-### [Model Cards](https://huggingface.co/docs/hub/model-cards) by Hugging Face
-
-Why read it: Model cards teach the habit to check license, data, intended use, and limitations before using open weights.
-
-## Interpretability, Safety, and Security
-
-TODO: Write a quick blurb explaining why this section matters.
-
-### [The Building Blocks of Interpretability](https://distill.pub/2018/building-blocks/) by Olah et al.
-
-Why read it: It gives visual intuition for hidden representations and interpretability interfaces.
-
-
-
-### [A Mathematical Framework for Transformer Circuits](https://transformer-circuits.pub/2021/framework/index.html) by Elhage et al.
-
-Why read it: It is the clearest entry into mechanistic interpretability for transformers.
-
-
-
-### [Concrete Problems in AI Safety](https://arxiv.org/abs/1606.06565) by Amodei et al.
-
-Why read it: It gives a practical taxonomy of accidents, reward hacking, shift, and supervision.
-
-
-
-### [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/) by OWASP
-
-Why read it: It is the shortest serious map of LLM application security risks.
-
-
-
-### [AI Risk Management Framework](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) by NIST
-
-Why read it: It gives governance vocabulary for mapping, measuring, managing, and monitoring AI risk.
-
-**Questions?** [Message me on X](https://x.com/loganthorneloe).
+**Support this guide by supporting the authors of these resources.**
