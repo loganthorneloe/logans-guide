@@ -89,15 +89,34 @@ Resources for understanding the ML engineering, AI engineering, infrastructure, 
 
 ## Hands-on Guides
 
-Hands-on guides from the [AI for Software Engineers](https://aiforswes.com) newsletter that help you work directly with important AI technologies. **More coming soon!**
+Hands-on projects and guides for building, running, and studying working AI systems, including guides from the [AI for Software Engineers](https://aiforswes.com) newsletter.
 
-- **[Run a Local Coding Model](https://www.aiforswes.com/p/you-dont-need-to-spend-100mo-on-claude)**  
-  *December 20, 2025 · [Repository](https://github.com/loganthorneloe/local-models)*  
+- **[microgpt](https://karpathy.github.io/2026/02/12/microgpt/)** by Andrej Karpathy · *February 12, 2026*<br>
+  Study and run the complete GPT training and inference algorithm in 200 lines of dependency-free Python, including tokenization, autograd, attention, and Adam optimization.
+
+- **[Run a Local Coding Model](https://www.aiforswes.com/p/you-dont-need-to-spend-100mo-on-claude)** by Logan Thorneloe · *December 20, 2025*<br>
   Running a model locally is a good way to make open-model tradeoffs concrete. This guide teaches how to set up a local coding model, what the experience feels like compared to hosted coding assistants, and where local inference is useful.
 
-- **[Build a Simple Recommendation System](https://www.aiforswes.com/p/collaborative-filtering)**  
-  *November 11, 2025 · [Repository](https://github.com/loganthorneloe/recommendation-system)*  
-  Recommendation systems are a small but useful way to see ML ideas in code. This guide teaches collaborative filtering and makes features, similarity, sparse data, and user-item interaction data concrete.
+- **[Build a Simple Recommendation System](https://www.aiforswes.com/p/collaborative-filtering)** by Logan Thorneloe · *November 11, 2025*<br>
+  Recommendation systems are a small but useful way to see ML ideas in code. This guide teaches collaborative filtering, user and item embeddings, training with implicit feedback, serving recommendations, and retraining from simulated interactions.
+
+- **[nanochat](https://github.com/karpathy/nanochat)** by Andrej Karpathy · *October 13, 2025*<br>
+  Train a complete ChatGPT-style model through tokenization, pretraining, supervised fine-tuning, reinforcement learning, evaluation, and inference.
+
+- **[Train a Reasoning-Capable LLM in One Weekend with NVIDIA NeMo](https://developer.nvidia.com/blog/train-a-reasoning-capable-llm-in-one-weekend-with-nvidia-nemo/)** by Mehran Maghoumi et al. · *July 22, 2025*<br>
+  Curate post-training data, fine-tune Llama 3.1 8B with LoRA, serve it with Triton, and evaluate its reasoning—using a single 80 GB NVIDIA GPU.
+
+- **[mini-swe-agent](https://github.com/SWE-agent/mini-swe-agent)** · *June 28, 2025*<br>
+  Run, inspect, and extend a compact software engineering agent that uses shell commands to work in repositories and resolve issues.
+
+- **[tiny-tpu](https://github.com/tiny-tpu-v2/tiny-tpu)** · *May 19, 2025*<br>
+  Simulate, test, and extend a TPU-style accelerator in SystemVerilog while studying its systolic array, vector processor, unified buffer, control unit, and instruction set.
+
+- **[Made With ML](https://madewithml.com/)** by Goku Mohandas · *2023*<br>
+  Build a production-grade ML application from design and development through deployment, testing, monitoring, orchestration, and CI/CD.
+
+- **[micrograd](https://github.com/karpathy/micrograd)** by Andrej Karpathy · *April 13, 2020*<br>
+  Study a tiny automatic differentiation engine and train a small neural network from first principles to understand backpropagation at the code level.
 
 ---
 
