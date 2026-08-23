@@ -47,8 +47,8 @@ Resources for understanding the foundations of machine learning from the bottom 
 
 Resources for understanding large language models, the most important topic in modern AI.
 
-- **[The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)** by Jay Alammar, with **[Transformer Series](https://www.3blue1brown.com/topics/neural-networks)** by 3Blue1Brown as the deeper visual companion  
-  The transformer architecture is the most important concept to grasp when learning how LLMs work. Both resources teach it visually.
+- **[Neural Networks & Transformer Series](https://www.3blue1brown.com/topics/neural-networks)** by 3Blue1Brown  
+  The transformer architecture is the most important concept to grasp when learning how LLMs work. This series builds a clear, deep visual intuition for how attention and neural networks function.
 
 - **[Build a Large Language Model (From Scratch)](https://www.manning.com/books/build-a-large-language-model-from-scratch)** by Sebastian Raschka  
   This book walks through tokenization, embeddings, attention, transformer blocks, training, and fine-tuning so the pieces of an LLM become concrete. It takes you from zero to training your own LLM. The [accompanying repo](https://github.com/rasbt/LLMs-from-scratch) contains the code and exercises.
