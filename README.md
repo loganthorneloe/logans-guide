@@ -28,23 +28,17 @@ Enjoy! 🚀
 
 ## General Resources
 
-General resources for software design and technical judgment that help when engineering AI systems. Consider these *optional*.
+General resources for software design and technical judgment that help when engineering AI systems. Consider this *optional*.
 
 - **[The Art of Doing Science and Engineering: Learning to Learn](https://press.stripe.com/the-art-of-doing-science-and-engineering)** by Richard W. Hamming  
   Two of the most important things to understand as an engineer working in AI are that AI is fundamentally a research discipline and that continued learning matters as much in AI as it does in software engineering. This book helps readers understand both. There is also a [shorter essay version](https://www.cs.utexas.edu/~dahlin/bookshelf/hamming.html) of this you can read if you prefer.
-
-- **[A Philosophy of Software Design](https://www.amazon.com/dp/173210221X)** by John Ousterhout  
-  This teaches a useful way to think about software design. It is particularly helpful for managing system complexity, an increasingly important consideration as AI makes software systems more complex.
 
 ## ML Foundations
 
 Resources for understanding the foundations of machine learning from the bottom up.
 
-- **[The Hundred-Page Machine Learning Book](https://themlbook.com/)** by Andriy Burkov  
-  This is the best short overview of machine learning. It goes into enough depth for the reader to get something substantial out of it without making the topics unapproachable. It's a great way to get started. After reading this, you'll have a good sense of whether ML/AI is something you would enjoy. The book has an [accompanying repo](https://github.com/aburkov/theMLbook).
-
 - **[Hands-On Machine Learning with Scikit-Learn and PyTorch](https://www.oreilly.com/library/view/hands-on-machine-learning/9798341607972/)** by Aurélien Géron  
-  This book is the gold standard for getting hands-on with machine learning. You'll build a machine learning project end-to-end and get hands-on experience with the most important technologies and techniques in AI. Unlike the book above, this goes into great depth but covers many important topics in a single resource. The [accompanying repo](https://github.com/ageron/handson-mlp) includes notebooks and exercise solutions.
+  This book is the gold standard for getting hands-on with machine learning. You'll build a machine learning project end-to-end and get hands-on experience with the most important technologies and techniques in AI. It goes into great depth and covers many important topics in a single resource. The [accompanying repo](https://github.com/ageron/handson-mlp) includes notebooks and exercise solutions.
 
 - **[Mathematics of Machine Learning](https://www.packtpub.com/en-us/product/mathematics-of-machine-learning-9781837027873)** by Tivadar Danka  
   This book teaches the linear algebra, probability, calculus, and optimization foundations that make models easier to reason about. This is another great resource that covers everything you need to know about ML math in a single book. Most engineers skip this part, but as AI advances, an understanding of the math behind it becomes more important. The book has an [accompanying repo](https://github.com/cosmic-cortex/mathematics-of-machine-learning-book).
@@ -103,14 +97,8 @@ Hands-on projects and guides for building, running, and studying working AI syst
 - **[nanochat](https://github.com/karpathy/nanochat)** by Andrej Karpathy · *October 13, 2025*<br>
   Train a complete ChatGPT-style model through tokenization, pretraining, supervised fine-tuning, reinforcement learning, evaluation, and inference.
 
-- **[Train a Reasoning-Capable LLM in One Weekend with NVIDIA NeMo](https://developer.nvidia.com/blog/train-a-reasoning-capable-llm-in-one-weekend-with-nvidia-nemo/)** by Mehran Maghoumi et al. · *July 22, 2025*<br>
-  Curate post-training data, fine-tune Llama 3.1 8B with LoRA, serve it with Triton, and evaluate its reasoning—using a single 80 GB NVIDIA GPU.
-
 - **[mini-swe-agent](https://github.com/SWE-agent/mini-swe-agent)** · *June 28, 2025*<br>
   Run, inspect, and extend a compact software engineering agent that uses shell commands to work in repositories and resolve issues.
-
-- **[tiny-tpu](https://github.com/tiny-tpu-v2/tiny-tpu)** · *May 19, 2025*<br>
-  Simulate, test, and extend a TPU-style accelerator in SystemVerilog while studying its systolic array, vector processor, unified buffer, control unit, and instruction set.
 
 - **[Made With ML](https://madewithml.com/)** by Goku Mohandas · *2023*<br>
   Build a production-grade ML application from design and development through deployment, testing, monitoring, orchestration, and CI/CD.
