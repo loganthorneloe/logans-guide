@@ -2,27 +2,16 @@
 
 # AI Foundations for Software Engineers
 
-**AI needs more software engineers.**
-
-Recent advancements in modern AI have made it one of the most life-changing technologies of our time, but it can only be effective if applied successfully. This repo contains the resources software engineers need to build a foundational understanding of AI.
-
-It's split into five sections intended to be worked in order:
+This repo contains the resources software engineers need to build a foundational understanding of AI. It's split into four sections:
 
 1. [General Resources](#general-resources)
 2. [ML Foundations](#ml-foundations)
 3. [LLMs](#llms)
 4. [Engineering](#engineering)
-5. [Hands-on Guides](#hands-on-guides)
 
-The guide follows these principles:
+This guide assumes the reader has prior experience with programming. Feel free to skip around between resources as you see fit. I share more great resources as I find them on [X](https://x.com/loganthorneloe) and [Substack](substack.com/@loganthorneloe).
 
-* **A solid foundation is most important.** Technologies used to build systems change over time, but their foundations don't. Building a solid foundation makes learning everything else easier.
-* **Simplicity is king.** This learning roadmap is intentionally lean, while its technical resources go deep into topics. It's purpose-built to help busy professionals build intuition for how AI systems function without wasting time.
-* **You don't understand what you can't build.** Many resources contain hands-on guides. Getting into the code is the best (and most fun) way to understand a topic and the only way to gain practical engineering experience.
-
-This guide assumes the reader has prior experience with programming. Feel free to skip around between resources if you have a background in some topics but not others. Don't treat this as a definitive list of AI resources—there are many excellent AI learning resources. I share great resources as I find them on [X](https://x.com/loganthorneloe).
-
-The best way to support this guide is by starring it and supporting the authors of the resources. If you're interested in more guides like this, subscribe to the [**AI for Software Engineers**](https://aiforswes.com/subscribe) newsletter. Feedback is appreciated.
+Subscribe to my newsletter, [**AI for Software Engineers**](https://aiforswes.com/subscribe), for more AI/ML engineering resources.
 
 Enjoy! 🚀
 
@@ -72,40 +61,10 @@ Resources for understanding the ML engineering, AI engineering, infrastructure, 
 - **[Designing Data-Intensive Applications](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/)** by Martin Kleppmann  
   AI systems are data-intensive systems and require strong engineering to solve difficult data-system problems. This book is the gold standard for understanding these challenges and teaches storage, indexing, streams, replication, consistency, and distributed system tradeoffs. This book isn't AI-focused but teaches many required engineering concepts for building AI systems at scale.
 
-- **[Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)** by Anthropic  
-  Agent engineering is in high demand and an excellent way to apply LLMs in a way that's actually helpful. This short read teaches when a workflow is enough, when an agent is actually useful, and the practical patterns for tool use and orchestration. Anthropic provides [companion implementation notebooks](https://github.com/anthropics/claude-cookbooks/tree/main/patterns/agents).
-
 - **[Inference Engineering](https://www.baseten.co/inference-engineering/)** by Philip Kiely  
   Serving machine learning models at scale is an incredible engineering feat. It requires an understanding of model architecture, serving technologies, and serving hardware to optimize serving systems for latency, reliability, and cost. This is one of the strongest current opportunities for software engineers in AI, and this book does the best job of laying out the information and making it easily understandable.
 
 - **[How to Scale Your Model](https://jax-ml.github.io/scaling-book/)** by Google DeepMind  
   Training large models is another incredible engineering feat and is as much a systems problem as a modeling problem. This online book builds intuition around accelerator parallelism, memory limits, communication costs, and the engineering tradeoffs behind scaling training efficiently. The [source repo](https://github.com/jax-ml/scaling-book) is available on GitHub.
-
-## Hands-on Guides
-
-Hands-on projects and guides for building, running, and studying working AI systems, including guides from the [AI for Software Engineers](https://aiforswes.com) newsletter.
-
-- **[microgpt](https://karpathy.github.io/2026/02/12/microgpt/)** by Andrej Karpathy · *February 12, 2026*<br>
-  Study and run the complete GPT training and inference algorithm in 200 lines of dependency-free Python, including tokenization, autograd, attention, and Adam optimization.
-
-- **[Run a Local Coding Model](https://www.aiforswes.com/p/you-dont-need-to-spend-100mo-on-claude)** by Logan Thorneloe · *December 20, 2025*<br>
-  Running a model locally is a good way to make open-model tradeoffs concrete. This guide teaches how to set up a local coding model, what the experience feels like compared to hosted coding assistants, and where local inference is useful.
-
-- **[Build a Simple Recommendation System](https://www.aiforswes.com/p/collaborative-filtering)** by Logan Thorneloe · *November 11, 2025*<br>
-  Recommendation systems are a small but useful way to see ML ideas in code. This guide teaches collaborative filtering, user and item embeddings, training with implicit feedback, serving recommendations, and retraining from simulated interactions.
-
-- **[nanochat](https://github.com/karpathy/nanochat)** by Andrej Karpathy · *October 13, 2025*<br>
-  Train a complete ChatGPT-style model through tokenization, pretraining, supervised fine-tuning, reinforcement learning, evaluation, and inference.
-
-- **[mini-swe-agent](https://github.com/SWE-agent/mini-swe-agent)** · *June 28, 2025*<br>
-  Run, inspect, and extend a compact software engineering agent that uses shell commands to work in repositories and resolve issues.
-
-- **[Made With ML](https://madewithml.com/)** by Goku Mohandas · *2023*<br>
-  Build a production-grade ML application from design and development through deployment, testing, monitoring, orchestration, and CI/CD.
-
-- **[micrograd](https://github.com/karpathy/micrograd)** by Andrej Karpathy · *April 13, 2020*<br>
-  Study a tiny automatic differentiation engine and train a small neural network from first principles to understand backpropagation at the code level.
-
----
 
 **Support this guide by supporting the authors of these resources.**
